@@ -79,6 +79,9 @@ The first LSTM passes its full sequence of hidden states to the second (`return_
 
 Training uses Adam (lr=0.001), MSE loss, and early stopping (patience=10, monitoring validation loss).
 
+<img width="2214" height="545" alt="image" src="https://github.com/user-attachments/assets/219cdcdd-0c34-4b9d-b87c-6d8251d1b3fa" />
+
+
 ---
 
 ## Model 2: Custom Transformer Encoder (TensorFlow/Keras)
@@ -200,6 +203,9 @@ Input: (batch, 24, 12)
 **Why take only the last time step?** After the encoder, every position's representation has attended to all other positions. The last position (`t = 23`, i.e., the most recent hour) is used as a summary of the full 24-hour window. This is a common choice for encoder-only forecasting; it works because self-attention is not causal here (all positions see all others), so the last token's output already aggregates information from the full sequence.
 
 The model is compiled with Adam and MSE loss, and trained with the same early stopping configuration as the LSTM.
+
+<img width="2214" height="545" alt="image" src="https://github.com/user-attachments/assets/3c9a1f29-379d-4ffc-a4da-b451516d5132" />
+
 
 ---
 
