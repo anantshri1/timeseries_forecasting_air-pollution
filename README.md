@@ -86,7 +86,7 @@ Training uses Adam (lr=0.001), MSE loss, and early stopping (patience=10, monito
 
 ## Model 2: Custom Transformer Encoder (TensorFlow/Keras)
 
-The second model implements a **Transformer encoder** based on a transformer constructed by (TheGradientPath)[https://github.com/samugit83/TheGradientPath/blob/master/Keras/transformers/time_series_forecast/notebook.ipynb] as custom `tf.keras.layers.Layer` subclasses. 
+The second model implements a **Transformer encoder** based on a transformer constructed by [TheGradientPath](https://github.com/samugit83/TheGradientPath/blob/master/Keras/transformers/time_series_forecast/notebook.ipynb) as custom `tf.keras.layers.Layer` subclasses. 
 
 ### MultiHeadSelfAttention
 
